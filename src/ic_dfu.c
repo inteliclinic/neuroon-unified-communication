@@ -52,7 +52,6 @@ struct __attribute__((packed)) data_frame{
 
 static uint16_t crc16(uint8_t* data, uint32_t length);
 static uint16_t crc16_ext(uint8_t* data_p, uint32_t length, uint16_t crc);
-/*static uint16_t crc16_kn_ext(uint8_t data, uint16_t crc);*/
 static void fill_frame(struct data_frame *frame, size_t *len);
 
 int goto_dfu(char *array, size_t *len, e_firmwareMilestone firmware){
@@ -170,16 +169,6 @@ static uint16_t crc16_ext(uint8_t* data_p, uint32_t length, uint16_t crc){
   }
   return crc;
 }
-
-/*
- *static uint16_t crc16_kn_ext(uint8_t data, uint16_t crc){
- *  uint8_t x;
- *  x = crc >> 8 ^ data;
- *  x ^= x>>4;
- *  crc = (crc << 8) ^ ((uint16_t)(x << 12)) ^ ((uint16_t)(x <<5)) ^ ((uint16_t)x);
- *  return crc;
- *}
- */
 
 static void fill_frame(struct data_frame *frame, size_t *len){
   frame->frame_index = dfu_instance.frame_index++;
