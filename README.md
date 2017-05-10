@@ -70,8 +70,8 @@ NUC version getters are in ic\_version.h file.
 
 ## Authors ##
 
-Paweł Kaźmierzewski _p.kazmierzewski@inteliclinic.com_
-Wojtek Węclewski    _w.weclewski@inteliclinic.com_
+- Paweł Kaźmierzewski _p.kazmierzewski@inteliclinic.com_
+- Wojtek Węclewski    _w.weclewski@inteliclinic.com_
 
 ## License ##
 
