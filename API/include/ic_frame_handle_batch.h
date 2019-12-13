@@ -31,7 +31,10 @@ typedef enum __attribute__((packed)){
    */
   DFU_CMD           = 0x20,
   FEED_CMD          = 0x21,
-  UNLOCK_MASK       = 0xAF
+  UNLOCK_MASK       = 0xAF,
+  TEST_CMD          = 0xBB,
+  FLASH_BQ_CMD      = 0xBD,
+  SHUTDOWN_CMD      = 0xDF
 }e_cmd;
 
 ///Make response command code from command code.
